@@ -11,9 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('user/{id}', function ($id) {
+    return 'User '.$id;
 });
+
+Route::get('/materi', 'MateriController@tampil');
 
 /*
 |--------------------------------------------------------------------------
